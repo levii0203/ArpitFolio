@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+  background-repeat: no-repeat;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .ring-gradient-rainbow {
+    background-image: linear-gradient(to right, 
+      violet, indigo, blue, green, yellow, orange, red, violet
+    )
+  }
+    .gradient-border {
+      border-image: linear-gradient(to right, #3b82f6, #06b6d4);
+      border-image-slice: 1;
+  }
+
+}
+@keyframes slideUp {
+ 
+    0% { transform: translateY(100); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+  
+}
+.animate-slide-up {
+  animation: slideUp 2s ease;
+}
+@keyframes slideRight {
+  0% { transform: translate(100%); opacity:0;}
+  100% {transform: translate(0%);opacity: 1;}
+}
+.animate-slide-right {
+  animation: slideRight 0.5s ease;
+}
+@keyframes gradientChange {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+.animate-gradient-change{
+  animation: gradientChange 0.5s ease;
+}
+@keyframes moveRight {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(8px); 
+  }
+}
+.animate-move-right {
+  animation: moveRight 4s forwards; 
+}
+@keyframes cursor {
+    50% { border-color: transparent}
+}
+@keyframes typing{
+  from {width: 0}
+}
+.animate-cursor {
+   animation:
+   typing 2s steps(4),
+   cursor .4s step-end infinite alternate;
+}
