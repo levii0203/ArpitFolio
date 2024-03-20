@@ -91,3 +91,23 @@ body {
    typing 2s steps(4),
    cursor .4s step-end infinite alternate;
 }
+@keyframes dropbelow{
+  0% {
+    
+    transform: translateY(0%);
+    opacity: 1;
+  }
+  50% {
+    
+    transform: translateY(3%);
+    opacity: 0;
+  }
+  100% {
+    
+    transform: translateY(6%);
+    opacity: 0;
+  }
+}
+.animate-dropbelow {
+  animation: dropbelow  0.7s ease-in-out ;
+}

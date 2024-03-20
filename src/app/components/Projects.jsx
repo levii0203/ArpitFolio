@@ -4,6 +4,7 @@ import {Card, CardHeader, CardBody, CardFooter, Image, Button} from "@nextui-org
 import { FaGithub } from "react-icons/fa6";
 import hero from '../../../public/hero.jpg';
 import dynamic from 'next/dynamic';
+import AnimatedElement from "./AnimatedElement"
 
 const Projects = ()=> {
 
@@ -12,11 +13,13 @@ const Projects = ()=> {
     const [flipped3,setFlipped3] = useState(false);
     const [flipped4,setFlipped4] = useState(false);
 
+    
+
     return(
         
-    <div className="hidden sm:flex md:w-full flex-row pt-16 md:flex-col lg:flex-row px-40 h-full w-full md:h-full lg:h-full lg:space-x-5 md:overflow-x-hidden md:space-y-10 lg:space-y-0 lg:overflow-x-hidden md:space-x-0">
-    
-        <Card isFooterBlurred className="w-full  h-[300px] col-span-12 sm:col-span-5 lg:h-64 lg:w-72 md:w-full   md:h-[300px]" >
+    <div className="hidden sm:flex xl:w-full md:w-full flex-row pt-16 md:flex-col lg:flex-row md:px-40 lg:px-36 h-full w-full md:h-full lg:h-full lg:space-x-7 md:overflow-x-hidden md:space-y-10 lg:space-y-0 lg:overflow-x-hidden md:space-x-0">
+      <AnimatedElement delay={200}>
+        <Card isFooterBlurred className="w-full xl:w-120 h-[300px] col-span-12 sm:col-span-5 lg:h-64 lg:w-72 md:w-full   md:h-[300px]" >
       {!flipped ? (
         <div className="w-full h-[300px] lg:h-64 lg:w-72 col-span-12" onClick={()=>setFlipped(!flipped)}>
       <CardHeader className="absolute z-10 top-1 flex-col items-start">
@@ -46,7 +49,10 @@ const Projects = ()=> {
           </Card>
           
       )}
+
     </Card>
+    </AnimatedElement>
+    <AnimatedElement delay={300}>
     <Card isFooterBlurred className="w-full h-[300px] col-span-12 sm:col-span-5 lg:h-64 lg:w-72 md:w-full  md:h-[300px] ">
         {!flipped2 ? (<div className="w-full h-[300px] lg:h-64 lg:w-72 col-span-12" onClick={()=>setFlipped2(!flipped2)}>
       <CardHeader className="absolute z-10 top-1 flex-col items-start">
@@ -78,6 +84,8 @@ const Projects = ()=> {
       )}
 
     </Card>
+    </AnimatedElement>
+    <AnimatedElement delay={400}>
     <Card isFooterBlurred className="w-full h-[300px] col-span-12 sm:col-span-5 lg:h-64 lg:w-72 md:w-full  md:h-[300px]">
       {!flipped3 ? (
       <div className="w-full h-[300px] lg:h-64 lg:w-72 col-span-12" onClick={()=>setFlipped3(!flipped3)}>
@@ -108,6 +116,8 @@ const Projects = ()=> {
 
       )}
     </Card>
+    </AnimatedElement>
+    <AnimatedElement delay={500}>
     <Card isFooterBlurred className="w-full h-[300px] col-span-12 sm:col-span-5 lg:h-64 lg:w-72 md:w-full  md:h-[300px]">
     {!flipped4 ? (<div className="w-full h-[300px] lg:h-64 lg:w-72 col-span-12" onClick={()=>setFlipped4(!flipped4)}>
       <CardHeader className="absolute z-10 top-1 flex-col items-start">
@@ -138,6 +148,7 @@ const Projects = ()=> {
           </Card>
       )}
     </Card>
+    </AnimatedElement>
     </div>
     );
 }

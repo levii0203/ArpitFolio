@@ -3,7 +3,7 @@ import React from "react";
 
 const Whatiknow = ()=>{
     return (
-    <div className="flex lg:flex-col md:flex-col lg:space-y-5 md:px-32  lg:pl-24 lg:h-full lg:w-fit lg:pt-24 md:py-12 md:space-y-5 ">
+    <div className="flex lg:flex-col md:flex-col lg:pb-0 lg:space-y-5 md:px-32  lg:pl-24 lg:h-full lg:w-fit lg:pt-36 md:py-12 md:space-y-5 ">
         <div className="flex lg:flex-row  md:w-full  lg:h-fit md:h-fit  md:flex-col md:space-y-5 lg:space-x-5 lg:space-y-0 lg:w-full bg-black">
         
             <div className="flex md:flex-row lg:flex-row md:w-full md:h-fit md:space-x-5 lg:w-fit">
@@ -97,8 +97,9 @@ const Whatiknow = ()=>{
             </div>
         </div>
     </div>
-    <div className='lg:pt-36 w-fit hidden md:hidden lg:block'>
-            <p className='text-white text-nowrap text-3xl'> Web3</p>
+    <div className= "w-fit h-full lg:pt-40 relative sm:hidden md:hidden lg:block">
+            <p className='bg-gradient-to-r from-blue-500 to-cyan-500 text-transparent bg-clip-text font-semibold text-3xl'> <span className="text-white text-3xl">Web </span>3</p>
+            <p className="text-gray-700 font-bold pt-1"> My skillset as a Web3 developer</p>
     </div>
 </div>
 );
