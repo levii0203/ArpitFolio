@@ -34,7 +34,7 @@ async function Sendmail(email,message,name,profession){
 }
 
 //Routing
-app.get("/",(req,res)=>{
+app.post("/",(req,res)=>{
     const {message,visitorname,visitorprof} = req.body;
     Sendmail("wolfrexparth@gmail.com",message,visitorname,visitorprof);
     res.send("Email receieved successfully");
